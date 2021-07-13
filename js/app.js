@@ -30,13 +30,13 @@ let ufoInfo = {};
 function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
-    let input = d3.select("input");
+    let input = d3.select(this);
     // 4b. Save the value that was changed as a variable.
     inputValue = input.property("value");
     console.log(inputValue);
 
     // 4c. Save the id of the filter that was changed as a variable.
-    inputId = inputValue.attr("id");
+    inputId = input.attr("id");
     console.log(inputId);
   
     // 5. If a filter value was entered then add that filterId and value
@@ -53,8 +53,6 @@ function updateFilters() {
   
   // 7. Use this function to filter the table when data is entered.
   function filterTable() {
-
-    d3.selectAll("input").on("change", updateFilters);
   
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
@@ -62,13 +60,13 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
     Object.entries(ufoInfo).forEach(([key, value])=>{
-      filteredData=filteredData.filter(row=>[key]===value)
+      filteredData=filteredData.filter(row=>row[key]===value)
     });
   
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
   }
-
+  d3.selectAll("input").on("change", updateFilters);
   // Build the table when the page loads
   buildTable(tableData);
 
