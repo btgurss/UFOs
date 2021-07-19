@@ -7,16 +7,16 @@ In this project I was tasked with creating a webpage to show information about d
 The code created was able to filter on several parameters.  These parameters become activated when an input has been completed.  In other words, as soon as a filter is put into a filter box and then the user clicks elsewhere, the data table will update to provide information from only those filters.  If a person selects another filter, the table will update with information that satifies both inputs.  The filters are located on the left side of the page and should look like the following image:  
 It should also be noted that an example of each input is inside of the input box.  For example, the date box shows the format the input should have in order for it to work correctly.
 
-![Theater_Outcomes_vs_Launch](Theater_Outcomes_vs_Launch.png)
+![ufosFilters.png](ufosFilters.png)
 
 There are two more images posted here.  These images show the following things:
 1. The first image shows the table before any filters are put in place.
 
-![Theater_Outcomes_vs_Launch](Theater_Outcomes_vs_Launch.png)
+![ufosPreFilter.png](ufosPreFilter.png)
 
 3. The second image shows the table after I filtered the data to only January 12 in the state of California.  The produced exactly one match.  This match, however, shows all of the information about this particular sighting.
 
-![Theater_Outcomes_vs_Launch](Theater_Outcomes_vs_Launch.png)
+![ufosAfterFilter.png](ufosAfterFilter.png)
 
 In order to reset the table, the user can click the "UFO Sightings" phrase in the upper left corner of the page.
 
